@@ -42,7 +42,7 @@ _clone.yml_ playbook is responsible for cloning repositories from GitHub, copyin
 ### Check:
 Project is deployed on link: http://a1testa1.work.gd/
 
-### Screenshot
+### Screenshot:
 
 <p align="center">
   <img src="https://github.com/vladislavkim10/image/blob/main/task.png" alt="Screenshot"/>
