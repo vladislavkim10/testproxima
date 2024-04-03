@@ -38,14 +38,16 @@ This tasks can also be implemented through the Ansible playbook _initial-config.
 _services-install.yml_ playbook installs Nginx, Docker, Net-tools, and Git.
 _clone.yml_ playbook is responsible for cloning repositories from GitHub, copying Dockerfile, and running containers.
 
-### Screenshot
+### Check:
+Project is deployed on link: http://a1testa1.work.gd/
 
-<p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/1175750/8614312/280e5dc2-26f1-11e5-9f1f-5891c3ca8b26.png" alt="Screenshot"/>
-</p>
+### Screenshot
 
 <p align="center">
   <img src="https://github.com/vladislavkim10/image/blob/main/task.png" alt="Screenshot"/>
 </p>
 
+<p align="center">
+  <img src="https://github.com/vladislavkim10/image/blob/main/task2.png" alt="Screenshot"/>
+</p>
 
