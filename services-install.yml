@@ -1,0 +1,18 @@
+- hosts: servers
+  remote_user: ubuntu
+  become: yes
+  tasks:
+    - name: Install nginx, docker, net-tools
+      apt:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - nginx
+        - docker.io
+        - net-tools
+        - git
+    - name: Add ubuntu user to docker group
+      user:
+        name: ubuntu
+        groups: docker
+        append: yes

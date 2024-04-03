@@ -1,0 +1,43 @@
+- hosts: all
+  remote_user: ubuntu
+  become: yes
+  tasks:
+    - name: Clone repo to the server
+      git:
+        repo: https://github.com/vladislavkim10/2048.git
+        dest: /opt/2048
+
+    - name: Copy Dockerfile to the cloned repository
+      copy:
+        src: Dockerfile
+        dest: /opt/2048/Dockerfile
+
+    - name: Build image from source repo
+      command: docker build -t 2048 /opt/2048
+      args:
+        chdir: /opt/2048
+
+    - name: Run container
+      docker_container:
+        name: 2048_container
+        image: 2048
+        state: started
+
+    - name: Copy nginx config
+      template:
+        src: nginx_config.j2
+        dest: /etc/nginx/sites-available/your_app
+      notify: Reload nginx
+
+    - name: Enable nginx site
+      file:
+        src: /etc/nginx/sites-available/your_app
+        dest: /etc/nginx/sites-enabled/your_app
+        state: link
+      notify: Reload nginx
+
+  handlers:
+    - name: Reload nginx
+      service:
+        name: nginx
+        state: reloaded

@@ -1,0 +1,25 @@
+- hosts: 198.199.81.230
+  remote_user: root
+  tasks:
+    - name: Create ubuntu user
+      user:
+        name: ubuntu
+        groups: sudo
+        append: yes
+        shell: /bin/bash
+        password: "{{ 'Ytrewq12345' | password_hash('sha512') }}"
+    - name: Copy SSH public key for ubuntu user
+      authorized_key:
+        user: ubuntu
+        key: "{{ lookup('file', '~/.ssh/fsk04.pub') }}"
+    - name: Disallow root SSH login
+      lineinfile:
+        dest: /etc/ssh/sshd_config
+        regexp: '^PermitRootLogin'
+        line: 'PermitRootLogin no'
+      notify: restart ssh service
+  handlers:
+    - name: restart ssh service
+      service:
+        name: sshd
+        state: restarted
