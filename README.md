@@ -20,12 +20,11 @@ Setup infrastructure:
   2.3 Add Ansible playbook and other config files as folder to the repo 
   
   2.4 Add tasks to your playbook to deploy your application
+  2.4.1 Clone repo to the server 
+  2.4.2 Build image from source repo
+  2.4.3 Run container  
+  2.4.4 Prepare nginx config for your app to open it to the internet with domain
   
-    2.4.1 Clone repo to the server 
-    2.4.2 Build image from source repo
-    2.4.3 Run container
-    2.4.4 Prepare nginx config for your app to open it to the internet with domain
-
 
 A small clone of [1024](https://play.google.com/store/apps/details?id=com.veewo.a1024), based on [Saming's 2048](http://
 
@@ -46,6 +45,7 @@ Project is deployed on link: http://a1testa1.work.gd/
 <p align="center">
   <img src="https://github.com/vladislavkim10/image/blob/main/task.png" alt="Screenshot"/>
 </p>
+
 
 <p align="center">
   <img src="https://github.com/vladislavkim10/image/blob/main/task2.png" alt="Screenshot"/>
