@@ -1,5 +1,5 @@
-# 2048
-. Setup infrastructure:
+# Task 2048
+Setup infrastructure:
 
   1.1 Create user 'ubuntu' with sudo permissions on your server
   
