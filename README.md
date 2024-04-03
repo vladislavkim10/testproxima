@@ -1,5 +1,6 @@
 # 2048
 . Setup infrastructure:
+
   1.1 Create user 'ubuntu' with sudo permissions on your server
   1.2 Configure ssh for secure authentication and connection
   1.3 Write Ansible playbook to install nginx, docker, net-tools
