@@ -30,7 +30,7 @@
 A small clone of [1024](https://play.google.com/store/apps/details?id=com.veewo.a1024), based on [Saming's 2048](http://
 
 
-### Description of the task:
+### Description of solution:
 
 A droplet has been provisioned in DigitalOcean using  _main.tf_ manifest file via Terraform. 
 It includes steps to create ubuntu user, grant sudo privileges, and transfer the public key to the remote repository.
