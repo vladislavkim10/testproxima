@@ -34,7 +34,9 @@ A small clone of [1024](https://play.google.com/store/apps/details?id=com.veewo.
 A droplet has been provisioned in DigitalOcean using  _main.tf_ manifest file via Terraform. 
 It includes steps to create ubuntu user, grant sudo privileges, and transfer the public key to the remote repository.
 This tasks can also be implemented through the Ansible playbook _initial-config.yml_.
+
 _services-install.yml_ playbook installs Nginx, Docker, Net-tools, and Git.
+
 _clone.yml_ playbook is responsible for cloning repositories from GitHub, copying Dockerfile, and running containers.
 
 ### Check:
