@@ -1,4 +1,4 @@
-- hosts: 198.199.81.230
+- hosts: all
   remote_user: root
   tasks:
     - name: Create ubuntu user
